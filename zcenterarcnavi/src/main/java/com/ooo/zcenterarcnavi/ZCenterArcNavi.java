@@ -29,6 +29,8 @@ public class ZCenterArcNavi extends LinearLayout {
     private float cornerRadius;
     private float shadowsize;
 
+    private int backcolor;
+
     public ZCenterArcNavi(Context context) {
         this(context, null);
     }
@@ -45,6 +47,7 @@ public class ZCenterArcNavi extends LinearLayout {
         centerRadius = typedArray.getFloat(R.styleable.ZCenterArcNavi_center_radius,50);
         cornerRadius = typedArray.getFloat(R.styleable.ZCenterArcNavi_corner_radius,5);
         shadowsize = typedArray.getFloat(R.styleable.ZCenterArcNavi_shadow_length,5);
+        backcolor = typedArray.getColor(R.styleable.ZCenterArcNavi_back_color,0xffffffff);
         typedArray.recycle();
         init();
     }
@@ -82,7 +85,11 @@ public class ZCenterArcNavi extends LinearLayout {
 
     private void init() {
         setBackgroundColor(Color.TRANSPARENT);
-
+        paint = new Paint();
+        path = new Path();
+        paint.setColor(backcolor);
+        paint.setStyle(Paint.Style.FILL);
+        paint.setAntiAlias(true);
     }
 
 
@@ -90,13 +97,6 @@ public class ZCenterArcNavi extends LinearLayout {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        paint = new Paint();
-        path = new Path();
-        paint.setColor(Color.BLUE);
-        paint.setStyle(Paint.Style.FILL);
-        paint.setAntiAlias(true);
-
-
         path.moveTo(0, shadowsize);
         path.lineTo(getWidth() / 2 - centerRadius - cornerRadius, shadowsize);
 
