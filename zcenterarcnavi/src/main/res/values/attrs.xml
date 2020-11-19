@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <declare-styleable name="ZCenterArcNavi">
+        <attr name="anchor_fab" format="reference" />
+        <attr name="shadow_length" format="float" />
+        <attr name="corner_radius" format="float" />
+        <attr name="center_radius" format="float"/>
+    </declare-styleable>
+
+
+</resources>
