@@ -6,15 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-<com.ooo.zcenterarcnavi.ZCenterArcNavi
-    android:layout_width="match_parent"
-    android:layout_height="80dp"
-    app:back_color="@color/colorPrimaryDark"
-    app:center_radius="50dp"
-    android:layout_alignParentBottom="true"
-    >
+    <com.ooo.zcenterarcnavi.ZCenterArcNavi
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:zn_back_color="@color/colorPrimaryDark"
+        android:layout_alignParentBottom="true"
+        app:zn_center_radius="30dp"
+        >
 
 
-</com.ooo.zcenterarcnavi.ZCenterArcNavi>
+    </com.ooo.zcenterarcnavi.ZCenterArcNavi>
 
 </RelativeLayout>

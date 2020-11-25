@@ -4,11 +4,11 @@
 
 
     <declare-styleable name="ZCenterArcNavi">
-        <attr name="anchor_fab" format="reference" />
-        <attr name="shadow_length" format="float" />
-        <attr name="corner_radius" format="float" />
-        <attr name="center_radius" format="dimension"/>
-        <attr name="back_color" format="reference" />
+        <attr name="zn_anchor_fab" format="reference" />
+        <attr name="zn_shadow_length" format="float" />
+        <attr name="zn_corner_radius" format="float" />
+        <attr name="zn_center_radius" format="dimension"/>
+        <attr name="zn_back_color" format="reference" />
     </declare-styleable>
 
 

@@ -44,15 +44,15 @@ public class ZCenterArcNavi extends LinearLayout {
         super(context, attrs, defStyleAttr);
         this.context = context;
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.ZCenterArcNavi);
-        fabId = typedArray.getResourceId(R.styleable.ZCenterArcNavi_anchor_fab, 0);
+        fabId = typedArray.getResourceId(R.styleable.ZCenterArcNavi_zn_anchor_fab, 0);
 //        centerRadius = typedArray.getDimension(R.styleable.ZCenterArcNavi_center_radius,50);
 
-        centerRadius = typedArray.getDimensionPixelSize(R.styleable.ZCenterArcNavi_center_radius, (int) TypedValue.applyDimension(
+        centerRadius = typedArray.getDimensionPixelSize(R.styleable.ZCenterArcNavi_zn_center_radius, (int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP, 50, getResources().getDisplayMetrics()));
 
-        cornerRadius = typedArray.getFloat(R.styleable.ZCenterArcNavi_corner_radius,5);
-        shadowsize = typedArray.getFloat(R.styleable.ZCenterArcNavi_shadow_length,5);
-        backcolor = typedArray.getColor(R.styleable.ZCenterArcNavi_back_color,0xffffffff);
+        cornerRadius = typedArray.getFloat(R.styleable.ZCenterArcNavi_zn_corner_radius,5);
+        shadowsize = typedArray.getFloat(R.styleable.ZCenterArcNavi_zn_shadow_length,5);
+        backcolor = typedArray.getColor(R.styleable.ZCenterArcNavi_zn_back_color,0xffffffff);
         typedArray.recycle();
         init();
     }
