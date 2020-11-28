@@ -9,9 +9,11 @@
     <com.ooo.zcenterarcnavi.ZCenterArcNavi
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        app:zn_back_color="@color/colorPrimaryDark"
+        app:zn_back_color="@color/white"
         android:layout_alignParentBottom="true"
-        app:zn_center_radius="30dp"
+        app:zn_center_radius="40dp"
+        app:zn_corner_radius="10dp"
+        app:zn_shadow_length="10dp"
         >
 
 

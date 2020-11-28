@@ -50,8 +50,12 @@ public class ZCenterArcNavi extends LinearLayout {
         centerRadius = typedArray.getDimensionPixelSize(R.styleable.ZCenterArcNavi_zn_center_radius, (int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP, 50, getResources().getDisplayMetrics()));
 
-        cornerRadius = typedArray.getFloat(R.styleable.ZCenterArcNavi_zn_corner_radius,5);
-        shadowsize = typedArray.getFloat(R.styleable.ZCenterArcNavi_zn_shadow_length,5);
+        cornerRadius =typedArray.getDimensionPixelSize(R.styleable.ZCenterArcNavi_zn_corner_radius,(int) TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP, 5, getResources().getDisplayMetrics()));
+
+        shadowsize = typedArray.getDimensionPixelSize(R.styleable.ZCenterArcNavi_zn_shadow_length,(int) TypedValue.applyDimension(
+                TypedValue.COMPLEX_UNIT_DIP, 5, getResources().getDisplayMetrics()));
+
         backcolor = typedArray.getColor(R.styleable.ZCenterArcNavi_zn_back_color,0xffffffff);
         typedArray.recycle();
         init();
@@ -136,6 +140,13 @@ public class ZCenterArcNavi extends LinearLayout {
 
         path.lineTo(0, getHeight());
         path.lineTo(0, shadowsize);
+
+
+
+        //关闭硬件加速才能有阴影效果
+        setLayerType(LAYER_TYPE_SOFTWARE, paint);
+        paint.setShadowLayer(shadowsize,0,0,Color.LTGRAY);
+
         path.close();
         canvas.drawPath(path, paint);
     }
