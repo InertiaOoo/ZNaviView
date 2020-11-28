@@ -100,8 +100,8 @@ public class ZCenterArcNavi extends LinearLayout {
         paint.setColor(backcolor);
         paint.setStyle(Paint.Style.FILL);
         paint.setAntiAlias(true);
+//        setLayerType(LAYER_TYPE_SOFTWARE, paint);
     }
-
 
 
     @Override
@@ -141,11 +141,8 @@ public class ZCenterArcNavi extends LinearLayout {
         path.lineTo(0, getHeight());
         path.lineTo(0, shadowsize);
 
-
-
-        //关闭硬件加速才能有阴影效果
-        setLayerType(LAYER_TYPE_SOFTWARE, paint);
         paint.setShadowLayer(shadowsize,0,0,Color.LTGRAY);
+
 
         path.close();
         canvas.drawPath(path, paint);
